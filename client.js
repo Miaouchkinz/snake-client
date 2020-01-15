@@ -18,6 +18,15 @@ const connect = function() {
   conn.on('connect', function() {
     conn.write('Name: GAB');
   });
+  // send the move commands string to the server
+  // conn.on('connect', function() {
+  //   setInterval( () => {
+  //     conn.write('Move: up');
+  //   }, 50);
+    // conn.write('Move: down');
+    // conn.write('Move: left');
+    // conn.write('Move: right');
+  });
   // prints "you ded cuz you idle" when the server kicks you
   conn.on('data', (data) => {
     console.log(data);
